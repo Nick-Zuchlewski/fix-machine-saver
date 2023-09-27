@@ -5,10 +5,10 @@ import (
 )
 
 func main() {
-	slaveIds := []byte{38, 68, 61, 57, 94}
+	slaveIds := []byte{10, 97}
 
 	trivibe := NewTrivibe()
-	trivibe.Configure("10.111.100.182", "502", 10000)
+	trivibe.Configure("10.224.10.117", "502", 10000)
 
 	// Connect to trivibe
 	Info.Println("Connecting to trivibe")
@@ -29,7 +29,7 @@ func main() {
 			}
 			Info.Printf("Results from slave: %v, %d\n", results, slaveId)
 			// Sleep for 1 second between slaves
-			time.Sleep(1000 * time.Millisecond)
+			time.Sleep(100 * time.Millisecond)
 		}
 		// Sleep for 1 second between loops
 		time.Sleep(1000 * time.Millisecond)
